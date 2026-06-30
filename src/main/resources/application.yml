@@ -4,7 +4,11 @@ server:
 spring:
   application:
     name: sentiment-api
-
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sentiment_db
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
   # Redis Configuration
   data:
     redis:
